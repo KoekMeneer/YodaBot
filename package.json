@@ -18,6 +18,7 @@
   "homepage": "https://github.com/KoekMeneer/YodaBot#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "discord.js": "^13.8.1",
     "express": "^4.18.1",
     "moment-timezone": "^0.5.34"
   }
