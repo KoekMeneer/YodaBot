@@ -1,0 +1,14 @@
+{
+    "name": "Yoda Discord bot",
+    "description": "A Yoda discord bot",
+    "repository": "https://github.com/KoekMeneer/YodaBot",
+    "logo": "https://cdn.discordapp.com/app-icons/993163373967585332/17fe0c2c23907772b4d8e259d2ea467b.png?size=256",
+    "keywords": ["node", "heroku"],
+    "image": "heroku/nodejs",
+    "env": {
+        "TOKEN": {
+            "description": "Discord bot token",
+            "value": "require"
+        }
+    }
+}
