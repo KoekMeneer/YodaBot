@@ -10,7 +10,6 @@ module.exports = {
     cooldown: 5,
     run: async (client, message, args) => {
        axios.get('https://tenor.googleapis.com/v2/search?key=' + apiKey + '&client_key=my_test_app&q=yoda&random=true').then(res => {
-        console.log(res.data.results)
             message.reply(res.data.results[Math.floor(Math.random() * res.data.results.length)].itemurl)
         }); 
 	}
