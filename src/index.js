@@ -1,7 +1,10 @@
 module.exports = () => {
 
     // Load our env
-    require('./util/env')();
+    if (process.env['TOKEN'] == null)
+    {
+        require('./util/env')();
+    }
 
     // Get our token
     const token = process.env['TOKEN'];
