@@ -1,0 +1,24 @@
+{
+  "name": "yoda-bot",
+  "version": "0.1.0",
+  "description": "A Yoda discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoekMeneer/YodaBot.git"
+  },
+  "author": "KoekMeneer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoekMeneer/YodaBot/issues"
+  },
+  "homepage": "https://github.com/KoekMeneer/YodaBot#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "moment-timezone": "^0.5.34"
+  }
+}
