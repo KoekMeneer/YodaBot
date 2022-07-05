@@ -2,6 +2,6 @@
 //
 require('./src/index')();
 
-// Start our dashboard
+// Start our webiste
 //
-require('./dashboard/index')();
+require('./web/index')();
