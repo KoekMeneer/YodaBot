@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoda bot | Commands/Features</title> 
+    <meta name="description" content="The Yoda Discord bot is a Yoda themed chat / fun bot...">
+    
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Yoda Discord bot">
+
+    <meta name="twitter:card" content="summary">
+    <!-- <meta name="twitter:domain" content="{location.host}"> -->
+    <meta name="twitter:title" property="og:title" itemprop="name" content="Yoda Discord bot">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="The Yoda Discord bot is a Yoda themed chat / fun bot...">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #212121;">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <!-- <img src="//cdn.discordapp.com/avatars/993163373967585332/839f21d5a0d88e929a0abb16d697e086.png" width="60" height="60" alt=""> -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Commands
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link" href="/commands">Commands <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        
+      <div class="container-fluid">
+        <div class="row content">
+        <div class="col-sm-2 sidenav" style="background-color: #212121;">
+        </div>
+
+        <div class="col-sm-8 text-left text-light">
+
+          <div class="faq_area section_padding_130" id="faq">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <!-- Section Heading-->
+                        <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                          <h3><span>Commands </span></h3>
+                          <p>Find all the information regarding the available commands of the Yoda bot.</p>
+                          <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- FAQ Area-->
+                    <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="accordion faq-accordian" id="faqAccordion">
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Action"
+                            class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingOne">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" itemprop="name">help<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                                    <div class="card-body text-dark">
+
+                                      <b>Usage:</b>
+                                      <p itemprop="usage">&help</p>
+                                      <b>Result:</b>
+                                      <p itemprop="result">A list of all commands</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Action"
+                            class="card border-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingTwo">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" itemprop="name">caption<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                                    <div class="card-body text-dark">
+                                      <b>Usage:</b>
+                                      <p itemprop="usage">&caption "Bottom text" "Top text"</p>
+                                      <b>Result:</b>
+                                      <p itemprop="result">A captioned image of yoda</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Action"
+                            class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                <div class="card-header" id="headingThree">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" itemprop="name">gif<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                                  <div class="card-body text-dark">
+                                    <b>Usage:</b>
+                                    <p itemprop="usage">&gif</p>
+                                    <b>Result:</b>
+                                    <p itemprop="result">A random gif of yoda</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="faq_area section_padding_130" id="faq">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <!-- Section Heading-->
+                        <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h3><span>Commands </span></h3>
+                            <p>Find all the information regarding the available commands of the Yoda bot.</p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- Commands Area-->
+                    
+                    <div class="col-12 col-sm-10 col-lg-8" itemprop="mainEntity" itemscope itemtype="http://schema.org/Action">
+                      <div class="accordion faq-accordian" id="faqAccordion">
+                          <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                              <div class="card-header" id="heading1">
+                                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" itemprop="name">help<span class="lni-chevron-up"></span></h6>
+                              </div>
+                              <div class="collapse" id="collapseOne" aria-labelledby="heading1" data-parent="#faqAccordion">
+                                  <div class="card-body text-dark">
+                                    <b>Usage:</b>
+                                    <p itemprop="usage">&help</p>
+                                    <b>Result:</b>
+                                    <p itemprop="result">A list of all commands</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                    <div class="col-12 col-sm-10 col-lg-8" itemprop="mainEntity" itemscope itemtype="http://schema.org/Action">
+                        <div class="accordion faq-accordian" id="faqAccordion">
+                            <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="card-header" id="heading2">
+                                    <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" itemprop="name">caption<span class="lni-chevron-up"></span></h6>
+                                </div>
+                                <div class="collapse" id="collapseTwo" aria-labelledby="heading2" data-parent="#faqAccordion">
+                                    <div class="card-body text-dark">
+                                      <b>Usage:</b>
+                                      <p itemprop="usage">&caption "Bottom text" "Top text"</p>
+                                      <b>Result:</b>
+                                      <p itemprop="result">A captioned image of yoda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-10 col-lg-8" itemprop="mainEntity" itemscope itemtype="http://schema.org/Action">
+                      <div class="accordion faq-accordian" id="faqAccordion">
+                          <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                              <div class="card-header" id="heading3">
+                                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" itemprop="name">gif<span class="lni-chevron-up"></span></h6>
+                              </div>
+                              <div class="collapse" id="collapseThree" aria-labelledby="heading3" data-parent="#faqAccordion">
+                                  <div class="card-body text-dark">
+                                    <b>Usage:</b>
+                                    <p itemprop="usage">&gif</p>
+                                    <b>Result:</b>
+                                    <p itemprop="result">A random gif of yoda</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+
+          <div class="col-sm-2 sidenav" style="background-color: #212121;">
+            <div class="well">
+              <!-- <p>ADS</p> -->
+            </div>
+            <div class="well">
+              <!-- <p>ADS</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+      </footer>       -->
+</body>
+</html>
