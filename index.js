@@ -4,7 +4,7 @@ const args = process.argv.slice(2);
 //
 if (args.length == 0 || args.includes('bot'))
 {
-    require('./src/index')();
+    require('./src/index').start();
 }
 
 // Start our webiste

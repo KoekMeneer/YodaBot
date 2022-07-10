@@ -56,6 +56,6 @@ module.exports = async (client, message) => {
         console.log(error, "error");
         message.reply({ content: `there was an error trying to execute that command!` });
     } finally {
-        console.log(`> ID : ${message.author.id} | User : ${message.author.tag} | command | ${command.name}`, "info");
+        console.log(`> ID : ${message.author.id} | User : ${message.author.tag} | command | ${command.name}`);
     }
 };

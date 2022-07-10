@@ -36,4 +36,20 @@ function registerRoutes(app)
     app.get('/faq', (req, res) => {
         view(res, 'faq');
     });
+
+    const bot = require('../src/index');
+    app.get('/api/v1/status', (req, res) => {
+        let status = {
+            version: require('../package.json').version,
+            bot: { 
+                online: bot.started,
+                uptime: bot.client.uptime,
+                discordInfo: {
+                    servers: bot.client.guilds.cache.size,
+                    members: bot.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)
+                }
+            }
+        }
+        res.json(status);
+    });
 }

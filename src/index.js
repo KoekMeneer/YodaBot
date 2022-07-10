@@ -1,59 +1,69 @@
-module.exports = () => {
+const discord = require("discord.js");
 
-    // Load our env
-    if (process.env['TOKEN'] == null)
+module.exports = {
+    started: false,
+    /**
+     * @type {discord.Client}
+     */
+    client: null,
+    start()
     {
-        require('./util/env')();
-    }
-
-    // Get our token
-    const token = process.env['TOKEN'];
-
-    // Create a new client
-    //
-    const discord = require("discord.js");
-    const client = new discord.Client({
-        restTimeOffset: 0,
-        restWsBridgetimeout: 100,
-        intents: 32767,
-        allowedMentions: {
-            parse: ["users"],
-            repliedUser: true
-        },
-        cacheWithLimits: {
-            MessageManager: {
-                sweepInterval: 300,
-                sweepFilter: discord.Sweepers.filterByLifetime({
-                    lifetime: 60,
-                    getComparisonTimestamp: m => m.editedTimestamp ?? m.createdTimestamp,
-                })
-            }
+        // Load our env
+        if (process.env['TOKEN'] == null)
+        {
+            require('./util/env')();
         }
-    });
-    
-    // Initialize client collections
-    //
-    client.commands = new discord.Collection();
-    client.aliases = new discord.Collection();
-    client.cooldowns = new discord.Collection();
-    
-    // Register events/commands
-    //
-    ["commands", "events"].forEach(handler => {
-        require(`./handlers/${handler}`)(client);
-    });
-    
-    // Add error handlers
-    //
-    client.on('error', error => console.error(error));
-    client.on('warn', info => console.warn(info));
-    process.on('unhandledRejection', error => console.error("UNHANDLED_REJECTION\n" + error));
-    process.on('uncaughtException', error => {
-        console.error("UNCAUGHT_EXCEPTION\n" + error,);
-           console.error("Uncaught Exception is detected, restarting...");
-        process.exit(1);
-    });
-    
-    // Log our bot in
-    client.login(token).catch((err) => { console.warn(err) });   
+
+        // Get our token
+        const token = process.env['TOKEN'];
+
+        // Create a new client
+        //
+        this.client = new discord.Client({
+            restTimeOffset: 0,
+            restWsBridgetimeout: 100,
+            intents: 32767,
+            allowedMentions: {
+                parse: ["users"],
+                repliedUser: true
+            },
+            cacheWithLimits: {
+                MessageManager: {
+                    sweepInterval: 300,
+                    sweepFilter: discord.Sweepers.filterByLifetime({
+                        lifetime: 60,
+                        getComparisonTimestamp: m => m.editedTimestamp ?? m.createdTimestamp,
+                    })
+                }
+            }
+        });
+        
+        // Initialize client collections
+        //
+        this.client.commands = new discord.Collection();
+        this.client.aliases = new discord.Collection();
+        this.client.cooldowns = new discord.Collection();
+        
+        // Register events/commands
+        //
+        ["commands", "events"].forEach(handler => {
+            require(`./handlers/${handler}`)(this.client);
+        });
+        
+        // Add error handlers
+        //
+        this.client.on('error', error => console.error(error));
+        this.client.on('warn', info => console.warn(info));
+        process.on('unhandledRejection', error => console.error("UNHANDLED_REJECTION\n" + error));
+        process.on('uncaughtException', error => {
+            console.error("UNCAUGHT_EXCEPTION\n" + error,);
+            console.error("Uncaught Exception is detected, restarting...");
+            process.exit(1);
+        });
+        
+        // Log our bot in
+        this.client.login(token).catch((err) => { console.warn(err) });
+
+        this.started = true;
+    }
 }

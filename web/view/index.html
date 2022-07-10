@@ -18,44 +18,13 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */ 
-        .navbar {
-          margin-bottom: 0;
-          border-radius: 0;
-        }
-        
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 450px}
-        
-        /* Set gray background color and 100% height */
-        .sidenav {
-          padding-top: 20px;
-          background-color: #f1f1f1;
-          height: 100%;
-        }
-        
-        /* Set black background color, white text and some padding */
-        footer {
-          background-color: #555;
-          color: white;
-          padding: 15px;
-        }
-        
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-          .sidenav {
-            height: auto;
-            padding: 15px;
-          }
-          .row.content {height:auto;} 
-        }
-      </style>
+    <link rel="stylesheet" href="css/style.css">
 
   <!-- Micro data -->
   <!-- <section itemscope itemtype="http://schema.org/Person"> 
@@ -71,9 +40,9 @@
     </section>
   </section> -->
 </head>
-<body style="background-color: #212121;">
+<body class="bg-site">
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
       <!-- <img src="//cdn.discordapp.com/avatars/993163373967585332/839f21d5a0d88e929a0abb16d697e086.png" width="60" height="60" alt=""> -->
 
@@ -84,7 +53,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-light" href="#">Home (current)</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -98,32 +67,66 @@
             </div>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="/commands">Commands</a>
+            <a class="nav-link text-light" href="/commands">Commands</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/faq">FAQ</a>
+            <a class="nav-link text-light" href="/faq">FAQ</a>
           </li>
         </ul>
       </div>
     </nav>
         
-      <div class="container-fluid text-center" itemscope itemtype="http://schema.org/Person">
+      <div class="container-fluid" itemscope itemtype="http://schema.org/Person">
         <div class="row content">
-          <div class="col-sm-2 sidenav" style="background-color: #212121;">
+          <div class="col-sm-2 sidenav">
           </div>
           <div class="col-sm-8 text-left text-light">
-            <h1> <span itemprop="name">Yoda bot</span></h1>
 
-            <p>A <span itemprop="additionalName">Yoda</span> themed Discord bot with a number of fun commands and the ability to respond to user chat messages.</p>
-            
-            <img class="rounded-circle" src="//cdn.discordapp.com/avatars/993163373967585332/839f21d5a0d88e929a0abb16d697e086.png?size=256" width="192" height="192" alt="Yoda Bot">
+            <div class="row justify-content-center text-center">
+              <div class="col-8">
+                <img class="rounded-circle mb-3" src="//cdn.discordapp.com/avatars/993163373967585332/839f21d5a0d88e929a0abb16d697e086.png?size=256" width="172" height="172" alt="Yoda Bot">
+                
+                <h1 class="title mb-3"> <span itemprop="name">Yoda discord bot</span></h1>
 
-            <hr>
-            <a href="https://discord.com/oauth2/authorize?client_id=993163373967585332&permissions=2147534912&scope=bot" target="_blank" class="btn btn-dark btn-outline-secondary text-light btn-lg">Invite</a>
+                <p class="text-desc">A <span itemprop="additionalName">Yoda</span> themed Discord bot with a number of fun commands and the ability to respond to user chat messages.</p>
+              </div>
+              <div class="col-8">
+                <a href="https://discord.com/oauth2/authorize?client_id=993163373967585332&permissions=2147534912&scope=bot" target="_blank" class="m-1 btn btn-invite text-white btn-lg rounded-pill"><i class="fa-brands fa-discord"></i> Invite</a>  
+                <a href="https://top.gg/bot/993163373967585332/vote" target="_blank" class="btn btn-vote text-white btn-lg rounded-pill"><i class="m-1 fa-solid fa-square-poll-horizontal"></i> Vote</a>
+              </div>
+            </div>
+
+            <div class="p-5">
+            </div>
+
+            <div class="row justify-content-center m-3">
+              <div class="col-8 text-center pb-5">
+                <h1>Features</h1>
+              </div>
+
+              <div class="col-8 btn-invite rounded m-3">
+                <h3 class="m-3">A number of fun commands</h3>
+                <p class="mx-3">The Yoda bot has a number of fun / meme commands that can be used.</p>
+                <p class="mx-3 mt-3">You can find all these commands on our webiste or by using the <code>&help</code> command in your server.</p>
+              </div>
+
+              <div class="col-8 btn-invite rounded m-3">
+                <h3 class="m-3">Responds to messages</h3>
+                <p class="mx-3">As you talk in your server the Yoda bot may respond to certain messages.</p>
+                <p class="mx-3 mt-3">How it works is that the bot will search for certain keywords in the user messages and if it found for example `hmmm` it will create a response (in this case `hmmmm`) and send this in the channel where the message was found.</p>
+              </div>
+              
+              <!-- <div class="col-md-4">.col-md-4</div> -->
+              <!-- <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div> -->
+            </div>
+
           </div>
-          <div class="col-sm-2 sidenav" style="background-color: #212121;">
+          <div class="col-sm-2 sidenav">
             <div class="well">
               <!-- <p>ADS</p> -->
+              <!-- <a href="https://top.gg/bot/993163373967585332">
+                <img src="https://top.gg/api/widget/993163373967585332.svg">
+              </a> -->
             </div>
             <div class="well">
               <!-- <p>ADS</p> -->
@@ -131,9 +134,5 @@
           </div>
         </div>
       </div>
-      
-      <!-- <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-      </footer>       -->
 </body>
 </html>

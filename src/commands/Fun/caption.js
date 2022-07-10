@@ -1,7 +1,6 @@
 const baseUrl = 'https://apimeme.com/meme?meme=Advice-Yoda';
 
 module.exports = {
-
     name: "caption",
     aliases: ['c'],
     description: "Returns a picture of yoda with the given caption",

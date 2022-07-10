@@ -17,10 +17,15 @@
   },
   "homepage": "https://github.com/KoekMeneer/YodaBot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "@discordjs/voice": "^0.10.0",
     "axios": "^0.27.2",
     "discord.js": "^13.8.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "moment-timezone": "^0.5.34"
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^5.0.2",
+    "moment-timezone": "^0.5.34",
+    "tweetnacl": "^1.0.3"
   }
 }

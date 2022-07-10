@@ -1,6 +1,5 @@
 const settings = require('../settings.json');
 module.exports = async (client) => {
-
     client.user.setPresence({
         status: "online"
     });
