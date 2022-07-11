@@ -1,4 +1,4 @@
+Sitemap: https://discord-yoda-bot.herokuapp.com/sitemap_index.xml
 User-agent: *
+Disallow: /api
 Allow: /
-
-Sitemap: https://discord-yoda-bot.herokuapp.com/sitemap.xml
